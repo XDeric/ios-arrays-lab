@@ -581,3 +581,28 @@ Using for loops, rotate `matrixToRotate` 90 degrees.
 var matrixToRotate = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 ![Matrix Rotation](images/rotated_matrix.jpeg)
+
+```
+var matrixToRotate = [[1, 2, 3],
+[4, 5, 6],
+[7, 8, 9]]
+var index = 0
+var n = 3
+
+for (x, i) in matrixToRotate.enumerated(){
+for(y, j) in matrixToRotate.enumerated(){
+//print("\(y) \(j)")
+//var k = matrixToRotate[x][y]
+matrixToRotate[x][y] = matrixToRotate[n-1-y][x]
+//        matrixToRotate[n - 1 - y][x] = matrixToRotate[n - 1 - x][n - 1 - y]
+//        matrixToRotate[n - 1 - x][n - 1 - y] = matrixToRotate[y][n - 1 - x]
+//        matrixToRotate[y][n - 1 - x] = k
+}
+//print("\(n) \(i)")
+}
+
+for _ in matrixToRotate{
+print(matrixToRotate[index])
+index += 1
+}
+```
